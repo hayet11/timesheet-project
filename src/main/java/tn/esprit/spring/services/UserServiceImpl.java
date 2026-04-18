@@ -30,7 +30,7 @@ public class UserServiceImpl implements IUserService {
             user = userRepository.save(u);
             log.info("addUser() end");
         } catch (Exception e) {
-            log.error("error in addUser() : " + e);
+            log.error("error in addUser() : {}", e);
         }
         return user;
     }
@@ -43,7 +43,7 @@ public class UserServiceImpl implements IUserService {
             user = userRepository.save(u);
             log.info("updateUser() end");
         } catch (Exception e) {
-            log.error("error in updateUser() : " + e);
+            log.error("error in updateUser() : {}", e);
         }
         return user;
     }
@@ -55,7 +55,7 @@ public class UserServiceImpl implements IUserService {
             userRepository.deleteById(Long.parseLong(id));
             log.info("deleteUser() end");
         } catch (Exception e) {
-            log.error("error in deleteUser() : " + e);
+            log.error("error in deleteUser() : {}", e);
         }
     }
 
